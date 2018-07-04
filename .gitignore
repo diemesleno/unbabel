@@ -16,3 +16,4 @@ pip-delete-this-directory.txt
 htmlcov/
 celerybeat-schedule
 how.txt
+.pytest_cache
