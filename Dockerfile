@@ -1,4 +1,4 @@
-FROM python:3.5-alpine
+FROM python:3.6-alpine
 LABEL author="Diemesleno Souza Carvalho <diemesleno@gmail.com>"
 
 RUN apk update && apk add --no-cache \

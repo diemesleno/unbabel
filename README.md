@@ -41,7 +41,7 @@ Page load time shouldnt exceed 1 second
 Unbabel's API: http://developers.unbabel.com/
 
 ## Technologies utilized
-* Python 3.5.2
+* Python 3.6+
 * Flask 1.0.2
 * PostgreSQL 10+
 
@@ -56,15 +56,7 @@ a) git clone https://github.com/diemesleno/unbabel.git
 
 b) cd unbabel
 
-c) docker-compose -d --build
-
-d) docker-compose exec website project db init
-
-e) docker-compose exec website py.test project/tests
-
-f) docker-compose exec website py.test --cov-report term-missing --cov project
-
-g) Access http://localhost:8000 and try the app
+c) ./run.sh
 ```
 
 ## Some screenshots
