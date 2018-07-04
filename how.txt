@@ -1,0 +1,39 @@
+docker-compose up --build
+
+docker-compose exec website project db init
+
+docker-compose exec website project db reset #zerar db
+
+docker-compose exec website py.test project/tests
+
+# docker-compose exec website py.test --cov-report term-missing --cov project
+
+# docker-compose exec website flake8 . # Não vamos perder tempo com as chatisses...
+
+# docker-compose exec website flake8 . --exclude __init__.py  #podemos excluir arquivos
+
+# pip install editable . # ?
+
+# docker-compose exec website project test
+
+# docker rmi -f $(docker images -qf dangling=true)
+
+<!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+
+
+Conseguir uma seção no shell do Python em projeto Flask
+
+a) from project.app import *
+
+b) app = create_app()
+
+c) ctx = app.test_request_context()
+
+d) ctx.push()
+
+Agora basta importar um model ou view ou qualquer coisa
+
+e) from project.blueprints.page.models import Translate
+
+translates = Translate.query.filter_by(status='new')
+

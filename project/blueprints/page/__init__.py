@@ -1,0 +1,1 @@
+#from project.blueprints.page.views import page # All the blueprints will need this line

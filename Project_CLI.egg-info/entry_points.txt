@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        project=cli.cli:cli
+    

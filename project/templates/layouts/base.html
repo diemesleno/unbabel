@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Unabel Translation Test - Backend Developer{% block title %}{% endblock %}</title>
+        <link href="{{ url_for('static', filename='css/vendor/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+{% block navbar %}
+    <div class="navbar navbar-static-top navbar-default green">
+        <div class="container">
+            <a class="navbar-brand" href="/">Unbabel Translation Test - Backend Developer</a>
+        </div>
+    </div>
+{% endblock %}
+<div class="container page">
+    <div class="content">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+    <hr>
+    {% block footer %}
+        <footer class="footer">
+            <p>&copy; Unbabel</p>
+        </footer>
+    {% endblock %}
+</div>
+{% block js_footer %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

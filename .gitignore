@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.pyc
+*.py[cod]
+# Temporary files
+*.*~
+# SQLite
+*.sqlite3
+*_bkp*
+*.manifest
+*.spec
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+htmlcov/

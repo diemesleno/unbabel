@@ -1,0 +1,27 @@
+.list-group-item-text .list-inline {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.language-nav {
+    margin-top: 6px;
+}
+.language-nav button:hover, .language-nav button:active {
+    text-decoration: none;
+}
+
+.green{
+    background-color: green;
+}
+
+.navbar-default{
+    border-color: green;
+}
+
+.translating{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: darkblue;
+    color: white;
+}
