@@ -61,7 +61,7 @@ c) ./run.sh
 
 ## Some screenshots
 
-### Sys1 [CSV Processing] Main Page
+### Main Page
 ![](app.png)
 
 
