@@ -1,14 +1,13 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
         <div class="container">
-            <form method="POST" autocomplete="off">
+            <form method="POST" action="{{ url_for('page') }}" role="form" autocomplete="off">
                     {{ form.csrf_token }}
                 <h2>Translate a text
                     <small>from English to Spanish with Unbabel Translation API</small>
                 </h2>
                 <div class="form-group">
                     <label for="input_text" class="sr-only">Text to translate</label>
-                    <!-- <input type="text" name="input_text" id="input_text" placeholder="Inform your text to translate" required autofocus/> -->
                     {{ form.input_text }}
 
                 </div>

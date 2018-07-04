@@ -1,17 +1,20 @@
-version: '3'
+version: '3.4'
 
 services:
   postgres:
-    image: 'postgres:10-alpine'
+    image: 'postgres:9.5.13-alpine'
+    restart: always
     env_file:
       - '.env'
     volumes:
       - 'postgres:/var/lib/postgresql/data'
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - '5432:5432'
 
   redis:
     image: 'redis:4.0.10-alpine'
+    restart: always
     command: redis-server --requirepass unbabel
     volumes:
       - 'redis:/var/lib/redis/data'
@@ -31,6 +34,8 @@ services:
       - '.:/project'
     ports:
       - '8000:8000'
+    depends_on:
+      - postgres
   
   celery:
     build: .
@@ -39,6 +44,10 @@ services:
       - '.env'
     volumes:
       - '.:/project'
+    depends_on:
+      - postgres
+      - redis
+      - website
 
 volumes:
   postgres:

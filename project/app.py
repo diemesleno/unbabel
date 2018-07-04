@@ -4,7 +4,6 @@ from celery import Celery
 
 from project.blueprints.page import views
 from project.extensions import debug_toolbar, csrf, db
-#from project.blueprints.page.models import Translate
 
 CELERY_TASK_LIST = [
     'project.blueprints.page.tasks',
@@ -21,7 +20,7 @@ def create_celery_app(app=None):
     :return: Celery app
     """
     app = app or create_app()
-
+    
     celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'], include=CELERY_TASK_LIST)
     celery.conf.update(app.config)
     TaskBase = celery.Task
@@ -49,7 +48,7 @@ def create_app(settings_override=None):
 
     if settings_override:
         app.config.update(settings_override)
-
+        
     app.add_url_rule('/', view_func=views.PageView.as_view('page'))
     extensions(app)
     

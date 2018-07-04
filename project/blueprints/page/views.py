@@ -5,17 +5,6 @@ from sqlalchemy.sql.expression import func
 from project.blueprints.page.models import Translate
 from project.blueprints.page.forms import TranslateForm
 
-# from flask import Blueprint
-
-# page = Blueprint('page', __name__, template_folder='templates') #create the templates folder inside the page folder
-
-"""
-@page.route('/')
-def home():
-    return render_template('page/home.html')
-"""
-
-
 class PageView(MethodView):
     def get(self):
         form = TranslateForm()
