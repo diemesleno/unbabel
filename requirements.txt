@@ -1,4 +1,6 @@
+alembic==0.9.10
 amqp==2.3.2
+aniso8601==3.0.2
 atomicwrites==1.1.5
 attrs==18.1.0
 billiard==3.5.0.3
@@ -12,6 +14,10 @@ decorator==4.3.0
 flake8==3.5.0
 Flask==1.0.2
 Flask-DebugToolbar==0.10.1
+flask-marshmallow==0.9.0
+Flask-Migrate==2.2.1
+Flask-RESTful==0.3.6
+Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 gunicorn==19.8.1
@@ -21,7 +27,10 @@ intervals==0.8.1
 itsdangerous==0.24
 Jinja2==2.10
 kombu==4.2.1
+Mako==1.0.7
 MarkupSafe==1.0
+marshmallow==2.15.3
+marshmallow-sqlalchemy==0.14.0
 mccabe==0.6.1
 more-itertools==4.2.0
 pluggy==0.6.0
@@ -31,6 +40,8 @@ pycodestyle==2.3.1
 pyflakes==1.6.0
 pytest==3.6.2
 pytest-cov==2.5.1
+python-dateutil==2.7.3
+python-editor==1.0.3
 pytz==2018.5
 redis==2.10.6
 requests==2.19.1

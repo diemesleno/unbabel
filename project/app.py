@@ -3,7 +3,7 @@ from flask import Flask
 from celery import Celery
 
 from project.blueprints.page import views
-from project.extensions import debug_toolbar, csrf, db
+from project.extensions import debug_toolbar, csrf, db, ma
 
 CELERY_TASK_LIST = [
     'project.blueprints.page.tasks',
@@ -65,5 +65,6 @@ def extensions(app):
     debug_toolbar.init_app(app)
     csrf.init_app(app)
     db.init_app(app)
+    ma.init_app(app)
 
     return None
