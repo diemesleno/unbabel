@@ -50,7 +50,7 @@ six==1.11.0
 SQLAlchemy==1.2.9
 SQLAlchemy-Utils==0.33.3
 urllib3==1.23
-validators==0.12.2
+validators==0.12.6
 vine==1.1.4
 Werkzeug==0.14.1
 WTForms==2.2.1
